@@ -24,7 +24,7 @@
                 "<all_urls>"
             ],
             "js": [
-                "github-ext.mjs"
+                "contenet.js"
             ]
         }
     ],
