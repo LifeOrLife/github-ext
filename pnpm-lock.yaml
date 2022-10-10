@@ -13,6 +13,7 @@ specifiers:
   prettier: ^2.7.1
   typescript: ~4.7.4
   vite: ^3.0.9
+  vite-plugin-time-reporter: ^2.0.0
   vue: ^3.2.38
   vue-tsc: ^0.40.7
 
@@ -32,6 +33,7 @@ devDependencies:
   prettier: 2.7.1
   typescript: 4.7.4
   vite: 3.1.6
+  vite-plugin-time-reporter: 2.0.0_vite@3.1.6
   vue-tsc: 0.40.13_typescript@4.7.4
 
 packages:
@@ -2019,6 +2021,14 @@ packages:
     dependencies:
       spdx-correct: 3.1.1
       spdx-expression-parse: 3.0.1
+    dev: true
+
+  /vite-plugin-time-reporter/2.0.0_vite@3.1.6:
+    resolution: {integrity: sha512-/QX7KBWi5Ae8t0TxZxPmHE8l8Tvf34uVnK40G9ZJdYrXi1ddffTi1Ax1rdcv3F7ATRroaNcRdW0VZJwOQaX3Ug==}
+    peerDependencies:
+      vite: ^2.0.0 || ^3.0.0
+    dependencies:
+      vite: 3.1.6
     dev: true
 
   /vite/3.1.6:

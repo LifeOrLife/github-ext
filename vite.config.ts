@@ -1,10 +1,10 @@
 import { fileURLToPath, URL } from 'node:url'
 import http from 'node:http'
 import type { ServerResponse } from 'node:http'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'node:path'
+import timeReporter from 'vite-plugin-time-reporter'
 
 let response: ServerResponse;
 http.createServer((req, res) => {
@@ -38,7 +38,7 @@ export default defineConfig({
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   },
-  plugins: [vue(), reloadPlugin()],
+  plugins: [vue(), reloadPlugin(), timeReporter()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -55,6 +55,7 @@ export default defineConfig({
     // lib: {
     //   entry: resolve(__dirname, 'src/content.ts'),
     //   name: 'content',
+    //   fileName: 'content',
     // }
   }
 })
